@@ -33,5 +33,9 @@ export const bid = {
   appMaintenance: 12000,           // per year after launch
   familyNote: 'Creaso-Norse Technologies is part of the Creaso family of organizations, alongside Creaso Camps LLC, which manages campgrounds for Denver Water at multiple reservoirs and holds right-of-way cleaning contracts with the City of Lakewood, Colorado, and the Creaso Cares Foundation, a nonprofit that helps people experiencing homelessness and veterans.',
   publicSector: 'Public-sector contracting: through its sister company Creaso Camps LLC, the Creaso family already delivers ongoing contracts for Denver Water and the City of Lakewood, Colorado.',
+  addendum: 'Questions & Answers – 1 for RFI S2026-0019 received and acknowledged; this response reflects its answers.',
+  deptSites: 'The District’s roughly 50–60 department, program and initiative sites are built into the platform and included in the flat rate at no additional charge. Each gets its own section, pages, editors and look inside the district site.',
+  languages: 'Every page in English and Spanish, written and reviewed by staff, plus a built-in translator for families’ other languages (Vietnamese, Chinese, Korean, Arabic, Russian, Ukrainian, Tagalog, Somali, Amharic, Nepali and more) right next to the language switch on every page.',
+  cora: 'The budget estimates in this response may be released publicly; nothing in it is marked confidential.',
   teamNote: 'Support & Operations is led by Andy Montgomery.'
 };
