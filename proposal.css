@@ -26,7 +26,10 @@
  .hero h1,.hero p,.hero .eyebrow{color:#000!important}
  .price-card{box-shadow:none;border:1px solid #999}
  .proposal{padding:0;gap:12px}
- .proposal-section{border:0;border-top:1px solid #999;border-radius:0;padding:12px 0;break-inside:avoid-page}
+ .proposal{display:block!important}.proposal>*+*{margin-top:10px}
+ .proposal-section{border:0;border-top:1px solid #999;border-radius:0;padding:10px 0;break-inside:auto}
+ .proposal-section h2{break-after:avoid}.proposal-section tr,.proposal-section li,.price-band>div,.facts dt,.facts dd{break-inside:avoid}.table-wrap{overflow:visible!important}
+ .proposal-hero{break-after:page}.proposal-hero .price-card{padding:10px 14px!important;font-size:.78rem;line-height:1.25;break-inside:avoid}.proposal-hero .price-card .small{font-size:.72rem}.proposal-hero .price-card hr{margin:3px 0!important}.proposal-hero .price-card strong{font-size:1.3rem}.proposal-hero .price-card strong.sm{font-size:.9rem}.proposal-hero .hero-inner{display:block!important}.proposal-hero .price-card{display:block!important;max-width:4.2in;margin-top:24px}
  .proposal-toc{display:none}
  a{color:#000;text-decoration:none}
 }
