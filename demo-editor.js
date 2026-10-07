@@ -74,6 +74,7 @@ export async function renderEditor(root) {
    <div class="form-grid">
     <div class="field" id="d-when-wrap" hidden><label for="d-when">${t('Event date & time', 'Fecha y hora del evento')}</label><input id="d-when" type="datetime-local"></div>
     <div class="field" id="d-where-wrap" hidden><label for="d-where">${t('Location', 'Lugar')}</label><input id="d-where" maxlength="120"></div>
+    <div class="field" id="d-etype-wrap" hidden><label for="d-etype">${t('Event type (shows in the district events hub)', 'Tipo de evento (aparece en el calendario del distrito)')}</label><select id="d-etype"><option value="school">${t('School event', 'Evento escolar')}</option><option value="athletics">${t('Athletics', 'Deportes')}</option><option value="board">${t('Board meeting', 'Junta escolar')}</option><option value="holiday">${t('Holiday or no school', 'Feriado o sin clases')}</option></select></div>
     <div class="field" id="d-expire-wrap" hidden><label for="d-expire">${t('Remove alert automatically after', 'Quitar el aviso automáticamente después de')}</label><select id="d-expire"><option value="1">${t('1 hour', '1 hora')}</option><option value="24" selected>${t('1 day', '1 día')}</option><option value="168">${t('1 week', '1 semana')}</option></select></div>
     <div class="field"><label for="d-schedule">${t('When should it go live?', '¿Cuándo debe publicarse?')}</label><select id="d-schedule"><option value="now">${t('Right away', 'De inmediato')}</option><option value="later">${t('Schedule for later', 'Programar para después')}</option></select></div>
     <div class="field" id="d-at-wrap" hidden><label for="d-at">${t('Go-live date & time', 'Fecha y hora de publicación')}</label><input id="d-at" type="datetime-local"></div>
@@ -122,7 +123,7 @@ export async function renderEditor(root) {
   }
   function syncKind() {
     const k = $('d-kind').value;
-    $('d-when-wrap').hidden = $('d-where-wrap').hidden = k !== 'event';
+    $('d-when-wrap').hidden = $('d-where-wrap').hidden = $('d-etype-wrap').hidden = k !== 'event';
     $('d-expire-wrap').hidden = k !== 'alert';
     $('photo-set').hidden = k === 'alert';
     $('sections-set').hidden = k !== 'page';
@@ -205,14 +206,14 @@ export async function renderEditor(root) {
   function clearForm() {
     editingId = null; image = ''; sections = []; renderSections();
     ['d-title', 'd-body', 'd-titleEs', 'd-bodyEs', 'd-alt', 'd-altEs', 'd-when', 'd-where', 'd-at'].forEach(id => $(id).value = '');
-    $('d-photo').value = ''; $('photo-thumb').innerHTML = ''; $('d-schedule').value = 'now'; $('d-template').value = 'blank';
+    $('d-photo').value = ''; $('d-etype').value = 'school'; $('photo-thumb').innerHTML = ''; $('d-schedule').value = 'now'; $('d-template').value = 'blank';
   }
   function loadItem(x) {
     editingId = x.id; sections = (x.sections || []).map(y => ({ title: y.title || '', titleEs: y.titleEs || '', body: y.body || '', bodyEs: y.bodyEs || '' })); renderSections(); $('d-kind').value = x.kind; syncKind(); $('d-scope').value = x.scope;
     $('d-title').value = x.title; $('d-titleEs').value = x.titleEs; $('d-body').value = x.body; $('d-bodyEs').value = x.bodyEs;
     image = x.uploaded ? x.image : ''; $('d-alt').value = x.imageAlt || ''; $('d-altEs').value = x.imageAltEs || '';
     $('photo-thumb').innerHTML = image ? `<img src="${image}" alt="" style="max-width:160px;border-radius:10px;margin:8px 0">` : '';
-    $('d-when').value = toLocal(x.eventAt); $('d-where').value = x.location || '';
+    $('d-when').value = toLocal(x.eventAt); $('d-where').value = x.location || ''; $('d-etype').value = x.eventType || 'school';
     $('d-schedule').value = x.publishAt && new Date(x.publishAt) > now() ? 'later' : 'now'; $('d-at').value = toLocal(x.publishAt);
     refresh(); root.querySelector('#demo-form').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
@@ -265,7 +266,7 @@ export async function renderEditor(root) {
       image: image || (kind === 'home' ? (s ? s.image : 'assets/d11.png') : ''), uploaded: !!image,
       imageAlt: image ? val('d-alt') : kind === 'home' ? (s ? s.name : 'District 11') + ' identity' : '',
       imageAltEs: image ? val('d-altEs') : kind === 'home' ? 'Identidad de ' + (s ? s.name : 'Distrito 11') : '',
-      eventAt: kind === 'event' ? new Date(val('d-when')).toISOString() : undefined, location: kind === 'event' ? val('d-where') : undefined,
+      eventAt: kind === 'event' ? new Date(val('d-when')).toISOString() : undefined, location: kind === 'event' ? val('d-where') : undefined, eventType: kind === 'event' ? $('d-etype').value : undefined,
       expiresAt: kind === 'alert' ? new Date(now().getTime() + Number($('d-expire').value) * 3600e3).toISOString() : undefined,
       versions: old ? [(({ versions, ...rest }) => rest)(old), ...(old.versions || [])].slice(0, 5) : []
     };
