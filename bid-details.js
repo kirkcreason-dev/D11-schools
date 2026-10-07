@@ -27,7 +27,7 @@ export const bid = {
   selfManage: 'Whenever the District is ready, Creaso-Norse Technologies will transition it to manage its own site, free of charge: the complete site, all content, documentation and hands-on training. No more relying on outside vendors.',
   demoUrl: 'https://kirkcreason-dev.github.io/D11-schools/',
   founderNote: 'Owner Kirk Creason has been building websites and software since 1999, and the company runs websites with over 20,000 pages.',
-  ownerPromise: 'No corporate layers: the District works directly with the owner, and customization requests are handled the same day.',
+  ownerPromise: 'We will customize the site any way the District wants. No corporate layers: the District works directly with the owner, and customization requests are handled the same day.',
   appPrice: 40000,                 // optional District 11 mobile app (iOS + Android)
   appPeriod: 'one-time build',
   appMaintenance: 12000,           // per year after launch

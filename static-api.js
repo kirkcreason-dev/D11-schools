@@ -17,7 +17,8 @@ export const DEMO_KEY = 'd11-demo-content-v1';
 export function demoItems() { try { const v = JSON.parse(localStorage.getItem(DEMO_KEY) || '[]'); return Array.isArray(v) ? v : []; } catch { return []; } }
 export function saveDemoItems(items) { try { localStorage.setItem(DEMO_KEY, JSON.stringify(items)); return true; } catch { return false; } }
 const allItems = () => {
-  const local = demoItems().filter(x => !x.expiresAt || new Date(x.expiresAt) > new Date());
+  const t0 = new Date();
+  const local = demoItems().filter(x => x.status !== 'review' && (!x.publishAt || new Date(x.publishAt) <= t0) && (!x.expiresAt || new Date(x.expiresAt) > t0));
   return [...local, ...staticItems];
 };
 

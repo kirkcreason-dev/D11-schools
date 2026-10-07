@@ -15,6 +15,12 @@ export const staticItems = [
   linkUrl: 'page.html?id=about-this-demo', linkLabel: 'About this demonstration', linkLabelEs: 'Acerca de esta demostración' },
 
 // ───────── District news (platform showcase items, clearly framed as demo content)
+{ id: 'news-customize', kind: 'news', scope: 'district', publishedAt: P,
+  title: 'Your site, your way: we will customize it any way you want',
+  titleEs: 'Su sitio, a su manera: lo personalizamos como usted quiera',
+  body: 'Anything you see on this demo can change: colors, layouts, menus, new sections, school-specific features and connections to the tools you already use. Requests go straight to the owner and are handled the same day, with no change-order fees.',
+  bodyEs: 'Todo lo que ve en esta demo puede cambiar: colores, diseños, menús, secciones nuevas, funciones para cada escuela y conexiones con las herramientas que ya usa. Las solicitudes van directo al propietario y se atienden el mismo día, sin cargos por cambios.',
+  linkUrl: 'page.html?id=customize', linkLabel: 'What we can customize', linkLabelEs: 'Qué podemos personalizar' },
 { id: 'news-proposal', kind: 'news', scope: 'district', publishedAt: P,
   title: 'Our proposal: every school site, one flat rate',
   titleEs: 'Nuestra propuesta: todos los sitios escolares, una tarifa fija',
@@ -39,6 +45,18 @@ export const staticItems = [
   linkUrl: 'page.html?id=migration-map', linkLabel: 'View the migration map', linkLabelEs: 'Ver el mapa de migración' },
 
 // ───────── District information pages
+{ id: 'customize', kind: 'page', scope: 'district', publishedAt: P,
+  title: 'We will customize it any way you want', titleEs: 'Lo personalizamos como usted quiera',
+  body: 'This demo is a starting point, not a template you are stuck with. District 11 decides how its websites look and work, and Creaso-Norse Technologies builds it. Requests go directly to the owner and are handled the same day, included in the flat rate.',
+  bodyEs: 'Esta demo es un punto de partida, no una plantilla fija. El Distrito 11 decide cómo se ven y funcionan sus sitios, y Creaso-Norse Technologies lo construye. Las solicitudes van directo al propietario y se atienden el mismo día, incluidas en la tarifa fija.',
+  sections: [
+    S('Look and feel', 'Apariencia', 'District and school colors, fonts and logos\nHomepage layouts for the district and each school\nPhoto galleries, video and featured stories\nMenus and navigation organized the way families search', 'Colores, tipografías y logotipos del distrito y de cada escuela\nDiseños de inicio para el distrito y cada escuela\nGalerías de fotos, video e historias destacadas\nMenús organizados como buscan las familias'),
+    S('Features', 'Funciones', 'New page types and sections whenever you need them\nSchool-specific tools: athletics schedules, bell schedules, clubs, staff directories\nForms, sign-ups and surveys\nLanguages beyond English and Spanish', 'Nuevos tipos de página y secciones cuando los necesite\nHerramientas por escuela: horarios deportivos, horarios de timbre, clubes, directorios del personal\nFormularios, inscripciones y encuestas\nIdiomas además de inglés y español'),
+    S('Connections', 'Conexiones', 'PowerSchool, SchoolMessenger, Schoology and district sign-on\nCalendars, menus, bus information and board systems the district already uses\nAnything else the district wants connected, scoped together', 'PowerSchool, SchoolMessenger, Schoology y el acceso del distrito\nCalendarios, menús, transporte y sistemas de la junta que el distrito ya usa\nCualquier otra conexión que el distrito quiera, definida en conjunto'),
+    S('How requests work', 'Cómo funcionan las solicitudes', '1. Tell the owner what you want: call, email or a quick note\n2. Most changes are done the same day\n3. No change orders, no surprise invoices; it is included in the flat rate', '1. Dígale al propietario lo que quiere: llamada, correo o una nota\n2. La mayoría de los cambios se hacen el mismo día\n3. Sin órdenes de cambio ni facturas sorpresa; está incluido en la tarifa fija'),
+    A('See the pricing', 'Ver los precios', 'proposal.html', 'Read our proposal', 'Leer nuestra propuesta')
+  ] },
+
 { id: 'about-d11', kind: 'page', scope: 'district', publishedAt: P,
   title: 'About District 11', titleEs: 'Acerca del Distrito 11',
   body: 'Colorado Springs School District 11 is the central public school system in Colorado Springs, serving about 23,000 students across 58 school and program sites, from preschool through high school, online learning and adult education.',
