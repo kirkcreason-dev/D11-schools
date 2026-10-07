@@ -1,6 +1,6 @@
 // "Try it yourself" editor for the static demo. Everything is stored only in this visitor's browser.
 import {t, esc, es, route, schoolURL} from './common.js';
-import {demoItems, saveDemoItems, demoSchools, saveDemoSchools} from './static-api.js';
+import {demoItems, saveDemoItems, demoSchools, saveDemoSchools, LOG_KEY, WS_KEYS, logActivity} from './static-api.js';
 import {clearMedia} from './blocks.js';
 
 const TEMPLATES = {
@@ -34,7 +34,7 @@ const STYLE = `.demo-role{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:
 .new-school{margin-top:28px}aside>.card+.card{margin-top:20px}`;
 
 
-export async function renderEditor(root) {
+export async function renderEditor(root, opts = {}) {
   if (!document.querySelector('#demo-editor-style')) { const st = document.createElement('style'); st.id = 'demo-editor-style'; st.textContent = STYLE; document.head.append(st); }
   let schools = [];
   try { schools = await (await fetch('schools-data.json')).json(); } catch {}
@@ -50,7 +50,7 @@ export async function renderEditor(root) {
   const toLocal = v => { if (!v) return ''; const d = new Date(v); return new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 16); };
 
   root.innerHTML = `<div class="section-title"><div><div class="eyebrow">${t('Try it yourself', 'Pruébelo usted mismo')}</div><h2>${t('Update a school site in under a minute.', 'Actualice un sitio escolar en menos de un minuto.')}</h2><p class="muted">${t('Pick a school, start from a template, add a photo, and publish in both languages. Switch roles to see how district approval works. Edits stay only in this browser.', 'Elija una escuela, comience con una plantilla, agregue una foto y publique en ambos idiomas. Cambie de rol para ver cómo funciona la aprobación del distrito. Las ediciones se guardan solo en este navegador.')}</p></div></div>
-  <div class="card demo-role"><span id="role-label"><strong>${t('You are signed in as:', 'Usted ha iniciado sesión como:')}</strong></span><div class="buttons" role="group" aria-labelledby="role-label"><button type="button" class="btn compact" data-role="editor">${t('School editor', 'Editor escolar')}</button><button type="button" class="btn compact" data-role="publisher">${t('District publisher', 'Publicador del distrito')}</button></div><p class="small muted" id="role-help"></p></div>
+  <div class="card demo-role" ${opts.embedded ? 'hidden' : ''}><span id="role-label"><strong>${t('You are signed in as:', 'Usted ha iniciado sesión como:')}</strong></span><div class="buttons" role="group" aria-labelledby="role-label"><button type="button" class="btn compact" data-role="editor">${t('School editor', 'Editor escolar')}</button><button type="button" class="btn compact" data-role="publisher">${t('District publisher', 'Publicador del distrito')}</button></div><p class="small muted" id="role-help"></p></div>
   <div class="split"><form id="demo-form" class="card" novalidate>
    <h3 id="form-heading"></h3>
    <div class="form-grid">
@@ -81,7 +81,7 @@ export async function renderEditor(root) {
    </div>
    <div class="checklist" id="d-checks" aria-live="polite"></div>
    <p id="d-msg" class="small" role="status" aria-live="polite"></p>
-   <div class="buttons"><button class="btn primary" type="submit" id="d-submit"></button><button class="btn" type="button" id="d-cancel" hidden>${t('Cancel edit', 'Cancelar edición')}</button><button class="btn" type="button" id="d-reset">${t('Reset demo', 'Restablecer demo')}</button></div>
+   <div class="buttons"><button class="btn primary" type="submit" id="d-submit"></button><button class="btn" type="button" id="d-draft">${t('Save as draft', 'Guardar borrador')}</button><button class="btn" type="button" id="d-cancel" hidden>${t('Cancel edit', 'Cancelar edición')}</button><button class="btn" type="button" id="d-reset">${t('Reset demo', 'Restablecer demo')}</button></div>
   </form>
   <aside><div class="card"><h3>${t('Preview', 'Vista previa')}</h3><div class="buttons" role="group" aria-label="${t('Preview language', 'Idioma de la vista previa')}"><button type="button" class="btn compact" data-pv="en">English</button><button type="button" class="btn compact" data-pv="es">Español</button></div><div id="d-preview" class="demo-preview"></div></div>
   <div class="card" id="d-queue" hidden></div>
@@ -190,7 +190,7 @@ export async function renderEditor(root) {
   function itemRow(x, actions) {
     const st = statusOf(x);
     return `<div class="listline"><div style="width:100%"><span class="small muted">${t(KINDS[x.kind][0], KINDS[x.kind][1])} · ${esc(scopeName(x.scope))}</span> ${badge(st)}${st === 'scheduled' ? ` <span class="small muted">${esc(new Date(x.publishAt).toLocaleString(es ? 'es-US' : 'en-US', { dateStyle: 'medium', timeStyle: 'short' }))}</span>` : ''}
-      <h4 style="margin:4px 0">${esc(es ? x.titleEs : x.title)}</h4><div class="buttons">${actions}</div></div></div>`;
+      <h4 style="margin:4px 0">${esc((es ? x.titleEs : x.title) || t('(untitled)', '(sin título)'))}</h4>${x.status === 'draft' && x.returnNote ? `<p class="small notice">${t('Returned with a note:', 'Devuelto con una nota:')} ${esc(x.returnNote)}</p>` : ''}<div class="buttons">${actions}</div></div></div>`;
   }
   function lists() {
     const items = demoItems();
@@ -239,13 +239,13 @@ export async function renderEditor(root) {
   $('d-template').addEventListener('change', applyTemplate);
   $('d-schedule').addEventListener('change', refresh);
   $('d-cancel').onclick = () => { clearForm(); refresh(); };
-  $('d-reset').onclick = () => { saveDemoItems([]); saveDemoSchools([]); clearMedia(); try { localStorage.removeItem('d11-builder-working-v1'); } catch {} schools = schools.filter(x => !x.demo); rebuildScopes(); listSchools(); clearForm(); refresh(); message(t('Demo reset. All your edits were removed from this browser.', 'Demo restablecida. Se quitaron sus ediciones de este navegador.')); };
+  $('d-reset').onclick = () => { saveDemoItems([], { quiet: true }); saveDemoSchools([]); clearMedia(); try { localStorage.removeItem('d11-builder-working-v1'); localStorage.removeItem(LOG_KEY); Object.values(WS_KEYS).forEach(k => localStorage.removeItem(k)); } catch {} schools = schools.filter(x => !x.demo); rebuildScopes(); listSchools(); clearForm(); refresh(); message(t('Demo reset. All your edits were removed from this browser.', 'Demo restablecida. Se quitaron sus ediciones de este navegador.')); };
 
   root.addEventListener('click', e => {
     const b = e.target.closest('[data-approve],[data-return],[data-edit],[data-restore],[data-remove]'); if (!b) return;
     const items = demoItems(), id = b.dataset.approve || b.dataset.return || b.dataset.edit || b.dataset.restore || b.dataset.remove, x = items.find(i => i.id === id); if (!x) return;
     if (b.dataset.approve) { x.status = 'published'; x.approvedAt = now().toISOString(); saveDemoItems(items); message(`${t('Approved.', 'Aprobado.')} <a href="${esc(viewURL(x))}">${t('See it on the site', 'Verlo en el sitio')}</a>`); }
-    if (b.dataset.return) { saveDemoItems(items.filter(i => i.id !== id)); message(t('Sent back to the school editor.', 'Devuelto al editor escolar.')); }
+    if (b.dataset.return) { x.status = 'draft'; x.returnNote = t('Please review and resubmit.', 'Revise y vuelva a enviar.'); saveDemoItems(items); message(t('Sent back to the school editor as a draft, with a note.', 'Devuelto al editor escolar como borrador, con una nota.')); }
     if (b.dataset.edit) { if (x.blocks) { location.href = `builder.html?id=${encodeURIComponent(x.id)}${es ? '&lang=es' : ''}`; return; } loadItem(x); return; }
     if (b.dataset.restore) { const prev = x.versions.shift(); Object.assign(x, prev, { versions: x.versions }); saveDemoItems(items); message(t('Previous version restored.', 'Versión anterior restaurada.')); }
     if (b.dataset.remove) { saveDemoItems(items.filter(i => i.id !== id)); if (editingId === id) clearForm(); message(t('Unpublished. It no longer appears on the site.', 'Despublicado. Ya no aparece en el sitio.')); }
@@ -255,29 +255,36 @@ export async function renderEditor(root) {
   root.querySelector('#demo-form').onsubmit = e => {
     e.preventDefault();
     if (checks().some(c => c.required && !c.ok)) return;
+    save();
+  };
+  $('d-draft').onclick = () => {
+    if (!val('d-title') && !val('d-titleEs')) { message(t('Give the draft a title first.', 'Primero ponga un título al borrador.'), true); return; }
+    save('draft');
+  };
+  function save(asStatus) {
     const kind = $('d-kind').value, scope = $('d-scope').value, items = demoItems();
     const old = editingId ? items.find(i => i.id === editingId) : null;
     const s = schools.find(x => x.id === scope);
     const item = {
       id: old ? old.id : kind === 'home' ? 'demo-home-' + scope : `demo-${kind}-${Date.now()}`, kind, scope,
-      status: role === 'editor' ? 'review' : 'published', publishedAt: now().toISOString(),
-      publishAt: $('d-schedule').value === 'later' ? new Date(val('d-at')).toISOString() : null,
+      status: asStatus || (role === 'editor' ? 'review' : 'published'), publishedAt: now().toISOString(),
+      publishAt: $('d-schedule').value === 'later' && val('d-at') ? new Date(val('d-at')).toISOString() : null,
       title: val('d-title'), titleEs: val('d-titleEs'), body: val('d-body'), bodyEs: val('d-bodyEs'), sections: kind === 'page' ? sections.map(x => ({ type: 'text', title: x.title.trim(), titleEs: x.titleEs.trim(), body: x.body.trim(), bodyEs: x.bodyEs.trim() })) : [],
       image: image || (kind === 'home' ? (s ? s.image : 'assets/d11.png') : ''), uploaded: !!image,
       imageAlt: image ? val('d-alt') : kind === 'home' ? (s ? s.name : 'District 11') + ' identity' : '',
       imageAltEs: image ? val('d-altEs') : kind === 'home' ? 'Identidad de ' + (s ? s.name : 'Distrito 11') : '',
-      eventAt: kind === 'event' ? new Date(val('d-when')).toISOString() : undefined, location: kind === 'event' ? val('d-where') : undefined, eventType: kind === 'event' ? $('d-etype').value : undefined,
+      eventAt: kind === 'event' && val('d-when') ? new Date(val('d-when')).toISOString() : undefined, location: kind === 'event' ? val('d-where') : undefined, eventType: kind === 'event' ? $('d-etype').value : undefined,
       expiresAt: kind === 'alert' ? new Date(now().getTime() + Number($('d-expire').value) * 3600e3).toISOString() : undefined,
       versions: old ? [(({ versions, ...rest }) => rest)(old), ...(old.versions || [])].slice(0, 5) : []
     };
     const next = [item, ...items.filter(i => i.id !== item.id && !(kind === 'home' && i.kind === 'home' && i.scope === scope))];
     if (!saveDemoItems(next)) { message(t('This browser blocked saving (it may be private browsing, or the photo is too large). Try a smaller photo or a regular window.', 'Este navegador bloqueó el guardado (puede ser navegación privada o la foto es muy grande). Pruebe una foto más pequeña o una ventana normal.'), true); return; }
     const st = statusOf(item);
-    message(st === 'review' ? t('Submitted. Switch to “District publisher” to approve it.', 'Enviado. Cambie a “Publicador del distrito” para aprobarlo.')
+    message(st === 'draft' ? t('Draft saved. Only staff can see it. Open it from “Your content” to finish.', 'Borrador guardado. Solo el personal lo ve. Ábralo desde “Su contenido” para terminarlo.') : st === 'review' ? t('Submitted. Switch to “District publisher” to approve it.', 'Enviado. Cambie a “Publicador del distrito” para aprobarlo.')
       : st === 'scheduled' ? t('Scheduled. It will appear on the site at the time you chose.', 'Programado. Aparecerá en el sitio a la hora elegida.')
       : `${t('Published.', 'Publicado.')} <a href="${esc(viewURL(item))}">${t('Open the site to see it', 'Abra el sitio para verlo')}</a>`);
     clearForm(); syncKind(); refresh();
-  };
+  }
 
   // ── Page sections
   $('d-add-section').onclick = () => { sections.push({ title: '', titleEs: '', body: '', bodyEs: '' }); renderSections(); refresh(); root.querySelector(`#sec-${sections.length - 1}-title`)?.focus(); };
@@ -323,10 +330,23 @@ export async function renderEditor(root) {
     schools = [...schools.filter(x => x.id !== id), school]; rebuildScopes(); $('d-scope').value = id; syncKind();
     $('ns-msg').className = 'small'; $('ns-msg').innerHTML = `${t('Added.', 'Agregado.')} <a href="${esc(schoolURL(id))}">${t('Open the new school site', 'Abrir el nuevo sitio escolar')}</a>. ${t('It is now selected above, so you can publish to it right away.', 'Ya está seleccionado arriba para que pueda publicar en él de inmediato.')}`;
     ['ns-name', 'ns-address', 'ns-phone', 'ns-intro', 'ns-introEs', 'ns-tags', 'ns-tagsEs'].forEach(x => $(x).value = ''); $('ns-logo').value = ''; $('ns-thumb').innerHTML = ''; nsLogo = '';
-    listSchools(); refresh();
+    logActivity('site-added', { scope: id, title: name, titleEs: name }); listSchools(); refresh();
   };
   root.addEventListener('click', e => { const d = e.target.closest('[data-del-school]'); if (!d) return;
     saveDemoSchools(demoSchools().filter(x => x.id !== d.dataset.delSchool)); schools = schools.filter(x => x.id !== d.dataset.delSchool); rebuildScopes(); listSchools(); refresh(); });
 
   setRole(role); syncKind(); prefillHome(); listSchools(); refresh();
+  return {
+    load(id) { const x = demoItems().find(i => i.id === id); if (!x) return false; if (x.blocks) { location.href = `builder.html?id=${encodeURIComponent(x.id)}${es ? '&lang=es' : ''}`; return true; } loadItem(x); return true; },
+    start({ scope, kind, template, when } = {}) {
+      clearForm();
+      if (scope && [...$('d-scope').options].some(o => o.value === scope)) $('d-scope').value = scope;
+      if (kind) { $('d-kind').value = kind; syncKind(); }
+      if (scope === 'all' && $('d-scope').querySelector('option[value="all"]')) $('d-scope').value = 'all';
+      if (template) { $('d-template').value = template; applyTemplate(); }
+      if (when) $('d-when').value = when;
+      prefillHome(); refresh(); root.querySelector('#demo-form').scrollIntoView({ block: 'start' }); $('d-title').focus({ preventScroll: true });
+    },
+    newSchool() { $('new-school').scrollIntoView({ block: 'start' }); $('ns-name').focus({ preventScroll: true }); }
+  };
 }

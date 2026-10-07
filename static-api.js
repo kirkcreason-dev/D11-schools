@@ -32,7 +32,41 @@ if (typeof window !== 'undefined' && !window.__d11FetchWrapped) {
   };
 }
 export function demoItems() { try { const v = JSON.parse(localStorage.getItem(DEMO_KEY) || '[]'); return Array.isArray(v) ? v : []; } catch { return []; } }
-export function saveDemoItems(items) { try { localStorage.setItem(DEMO_KEY, JSON.stringify(items)); return true; } catch { return false; } }
+export function saveDemoItems(items, opts = {}) {
+  const before = opts.quiet ? null : demoItems();
+  try { localStorage.setItem(DEMO_KEY, JSON.stringify(items)); } catch { return false; }
+  if (before) logChanges(before, items);
+  return true;
+}
+export { staticItems };
+
+// ── Workspace stores (all local to this browser in the demo)
+export const ROLE_KEY = 'd11-demo-role-v1';
+export const LOG_KEY = 'd11-demo-log-v1';
+export const WS_KEYS = { users: 'd11-demo-users-v1', redirects: 'd11-demo-redirects-v1', requests: 'd11-demo-requests-v1', mediaMeta: 'd11-demo-media-meta-v1' };
+export const readJSON = (key, fallback) => { try { const v = JSON.parse(localStorage.getItem(key) || 'null'); return v ?? fallback; } catch { return fallback; } };
+export const writeJSON = (key, value) => { try { localStorage.setItem(key, JSON.stringify(value)); return true; } catch { return false; } };
+export const currentRole = () => { try { return localStorage.getItem(ROLE_KEY) || 'editor'; } catch { return 'editor'; } };
+export const readLog = () => { const v = readJSON(LOG_KEY, []); return Array.isArray(v) ? v : []; };
+export function logActivity(action, detail = {}) {
+  writeJSON(LOG_KEY, [{ at: new Date().toISOString(), role: currentRole(), action, ...detail }, ...readLog()].slice(0, 300));
+}
+const strip = x => { const { versions, publishedAt, ...rest } = x; return JSON.stringify(rest); };
+function logChanges(before, after) {
+  const B = new Map(before.map(x => [x.id, x])), A = new Set(after.map(x => x.id)), now = new Date();
+  const info = x => ({ id: x.id, kind: x.kind, scope: x.scope, title: x.title, titleEs: x.titleEs });
+  const fresh = x => x.status === 'review' ? 'submitted' : x.status === 'draft' ? 'drafted' : x.publishAt && new Date(x.publishAt) > now ? 'scheduled' : 'published';
+  for (const x of [...after].reverse()) {
+    const o = B.get(x.id);
+    if (!o) { logActivity(fresh(x), info(x)); continue; }
+    if (o.status === 'review' && x.status === 'published' && strip({ ...o, status: 'published', approvedAt: x.approvedAt }) === strip(x)) logActivity('approved', info(x));
+    else if (o.status === 'review' && x.status === 'draft' && x.returnNote) logActivity('returned', { ...info(x), note: x.returnNote });
+    else if (x.expiresAt && x.expiresAt !== o.expiresAt && new Date(x.expiresAt) <= now) logActivity('ended', info(x));
+    else if ((x.versions || []).length < (o.versions || []).length) logActivity('restored', info(x));
+    else if (strip(o) !== strip(x)) logActivity(x.status === 'published' && o.status !== 'published' ? fresh(x) : x.status === 'review' ? 'submitted' : x.status === 'draft' ? 'drafted' : 'updated', info(x));
+  }
+  for (const o of before) if (!A.has(o.id)) logActivity('removed', info(o));
+}
 const allItems = () => {
   const t0 = new Date();
   const local = demoItems().filter(x => x.status !== 'review' && x.status !== 'draft' && (!x.publishAt || new Date(x.publishAt) <= t0) && (!x.expiresAt || new Date(x.expiresAt) > t0));

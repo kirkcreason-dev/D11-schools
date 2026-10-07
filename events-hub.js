@@ -4,8 +4,8 @@ import {demoItems} from './static-api.js';
 import {sourceEvents} from './resources.js';
 import {calendarICS} from './calendar-utils.js';
 
-const TIERS = [['all', 'All schools', 'Todas las escuelas'], ['High', 'High School', 'Preparatoria'], ['Middle', 'Middle School', 'Secundaria'], ['Elementary', 'Elementary', 'Primaria']];
-const TYPES = [['all', 'All events', 'Todos'], ['athletics', 'Athletics', 'Deportes'], ['board', 'Board meetings', 'Junta escolar'], ['holiday', 'Holidays & no school', 'Feriados y sin clases'], ['school', 'School events', 'Eventos escolares']];
+export const TIERS = [['all', 'All schools', 'Todas las escuelas'], ['High', 'High School', 'Preparatoria'], ['Middle', 'Middle School', 'Secundaria'], ['Elementary', 'Elementary', 'Primaria']];
+export const TYPES = [['all', 'All events', 'Todos'], ['athletics', 'Athletics', 'Deportes'], ['board', 'Board meetings', 'Junta escolar'], ['holiday', 'Holidays & no school', 'Feriados y sin clases'], ['school', 'School events', 'Eventos escolares']];
 const TYPE_LABEL = Object.fromEntries(TYPES.map(([k, en, sp]) => [k, [en, sp]]));
 const SPORTS = [['Varsity volleyball', 'Voleibol varsity'], ['Varsity football', 'Fútbol americano varsity'], ['Boys soccer', 'Fútbol varonil'], ['Cross country meet', 'Competencia de campo traviesa'], ['Girls basketball', 'Básquetbol femenil'], ['Softball', 'Sóftbol']];
 const MS_SPORTS = [['Volleyball', 'Voleibol'], ['Cross country', 'Campo traviesa'], ['Flag football', 'Fútbol de bandera'], ['Basketball', 'Básquetbol']];
@@ -30,17 +30,22 @@ function sampleEvents(schools) {
   return out;
 }
 
-export async function renderEventsHub(root) {
-  if (!root) return;
-  let schools = [];
-  try { schools = await (await fetch('schools-data.json')).json(); } catch {}
+// Every upcoming event from every site: real district dates, events published on any school site, labeled samples
+export function hubEvents(schools, { includePast = false } = {}) {
   const byId = Object.fromEntries(schools.map(s => [s.id, s]));
   // 1) real district calendar dates, 2) every event published on any school site, 3) labeled sample events
   const holidays = sourceEvents.map(e => ({ ...e, type: 'holiday', school: null, official: true }));
   const published = demoItems().filter(x => x.kind === 'event' && x.status !== 'review' && x.status !== 'draft' && (!x.publishAt || new Date(x.publishAt) <= new Date()) && x.eventAt)
     .map(x => ({ id: x.id, type: x.eventType || 'school', school: byId[x.scope] || null, eventAt: x.eventAt, eventEnd: x.eventEnd, title: x.title, titleEs: x.titleEs, body: x.body, bodyEs: x.bodyEs, location: x.location, published: true, href: `page.html?id=${encodeURIComponent(x.id)}${es ? '&lang=es' : ''}` }));
   const now = new Date(); now.setHours(0, 0, 0, 0);
-  const all = [...holidays, ...published, ...sampleEvents(schools)].filter(e => new Date(e.eventEnd || e.eventAt) >= now).sort((a, b) => a.eventAt.localeCompare(b.eventAt));
+  return [...holidays, ...published, ...sampleEvents(schools)].filter(e => includePast || new Date(e.eventEnd || e.eventAt) >= now).sort((a, b) => a.eventAt.localeCompare(b.eventAt));
+}
+
+export async function renderEventsHub(root) {
+  if (!root) return;
+  let schools = [];
+  try { schools = await (await fetch('schools-data.json')).json(); } catch {}
+  const all = hubEvents(schools);
   let tier = 'all', type = 'all', shown = 10;
 
   const matches = (e, tr = tier, ty = type) => (ty === 'all' || e.type === ty) && (tr === 'all' || !e.school || e.school.level === tr);
