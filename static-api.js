@@ -1,6 +1,7 @@
 // Browser-only stand-in for the concept's server API, so the public site runs on any static host.
 import {staticItems as baseItems, staticResources} from './static-content.js';
 import {moreItems} from './static-content-more.js';
+import {blockText} from './blocks.js';
 const staticItems = [...baseItems, ...moreItems];
 import {resources, sourceEvents} from './resources.js';
 
@@ -14,11 +15,27 @@ const snippet = s => { s = String(s || '').replace(/\s+/g, ' ').trim(); return s
 
 // Edits made in the "Try the editor" demo live only in this visitor's browser.
 export const DEMO_KEY = 'd11-demo-content-v1';
+export const DEMO_SCHOOLS_KEY = 'd11-demo-schools-v1';
+export function demoSchools() { try { const v = JSON.parse(localStorage.getItem(DEMO_SCHOOLS_KEY) || '[]'); return Array.isArray(v) ? v : []; } catch { return []; } }
+export function saveDemoSchools(list) { try { localStorage.setItem(DEMO_SCHOOLS_KEY, JSON.stringify(list)); return true; } catch { return false; } }
+// Schools added in the editor demo join the real directory everywhere the site loads schools-data.json
+if (typeof window !== 'undefined' && !window.__d11FetchWrapped) {
+  window.__d11FetchWrapped = true;
+  const realFetch = window.fetch.bind(window);
+  window.fetch = async (input, init) => {
+    const url = typeof input === 'string' ? input : input.url;
+    const res = await realFetch(input, init);
+    if (!/schools-data\.json(\?|$)/.test(url) || !res.ok) return res;
+    const extra = demoSchools(); if (!extra.length) return res;
+    const list = await res.json();
+    return new Response(JSON.stringify([...list, ...extra.filter(x => !list.some(s => s.id === x.id))]), { status: 200, headers: { 'content-type': 'application/json' } });
+  };
+}
 export function demoItems() { try { const v = JSON.parse(localStorage.getItem(DEMO_KEY) || '[]'); return Array.isArray(v) ? v : []; } catch { return []; } }
 export function saveDemoItems(items) { try { localStorage.setItem(DEMO_KEY, JSON.stringify(items)); return true; } catch { return false; } }
 const allItems = () => {
   const t0 = new Date();
-  const local = demoItems().filter(x => x.status !== 'review' && (!x.publishAt || new Date(x.publishAt) <= t0) && (!x.expiresAt || new Date(x.expiresAt) > t0));
+  const local = demoItems().filter(x => x.status !== 'review' && x.status !== 'draft' && (!x.publishAt || new Date(x.publishAt) <= t0) && (!x.expiresAt || new Date(x.expiresAt) > t0));
   return [...local, ...staticItems];
 };
 
@@ -52,7 +69,7 @@ export async function staticApi(path, body) {
       ...staticResources.map(r => ({ type: 'resource', scope: 'district', title: es ? r.titleEs : r.title, href: r.href + (es ? '?lang=es' : ''),
         text: [r.title, r.titleEs, r.body, r.bodyEs].join(' '), snippet: es ? r.bodyEs : r.body })),
       ...allItems().filter(x => x.kind !== 'home').map(x => ({ type: x.kind, scope: x.scope, title: es ? x.titleEs : x.title, href: pageHref(x.id),
-        text: [x.title, x.titleEs, x.body, x.bodyEs, ...(x.sections || []).flatMap(s => [s.title, s.titleEs, s.body, s.bodyEs])].join(' '), snippet: es ? x.bodyEs : x.body })),
+        text: [x.title, x.titleEs, x.body, x.bodyEs, ...(x.sections || []).flatMap(s => [s.title, s.titleEs, s.body, s.bodyEs]), blockText(x.blocks)].join(' '), snippet: es ? x.bodyEs : x.body })),
       ...sourceEvents.map(e => ({ type: 'event', scope: 'district', title: es ? e.titleEs : e.title, href: 'calendar.html' + (es ? '?lang=es' : ''),
         text: [e.title, e.titleEs, e.body, e.bodyEs, e.eventAt].join(' '), snippet: es ? e.bodyEs : e.body }))
     ];
