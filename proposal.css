@@ -1,0 +1,39 @@
+.proposal-hero .hero-inner{align-items:center}
+.price-card{background:#fff;color:var(--navy);border-radius:20px;padding:28px 32px;box-shadow:0 20px 50px rgba(0,0,0,.25);min-width:260px}
+.price-card strong{display:block;font-size:2.6rem;line-height:1.1;letter-spacing:-.02em}
+.price-card strong.sm{font-size:1.4rem}
+.price-card hr{border:0;border-top:1px solid #dde6ee;margin:14px 0}
+.proposal{display:grid;gap:28px;padding:40px 16px 64px}
+.proposal-toc ol{columns:2;column-gap:32px;padding-left:1.2em;margin:0}
+.proposal-toc li{margin:4px 0}
+.proposal-section{background:#fff;border:1px solid #dde6ee;border-radius:18px;padding:28px 32px}
+.proposal-section h2{display:flex;gap:14px;align-items:baseline;margin-top:0}
+.proposal-section .num{display:inline-grid;place-items:center;min-width:2rem;height:2rem;border-radius:50%;background:var(--navy);color:#fff;font-size:.95rem}
+.proposal-section li{margin:8px 0;line-height:1.6}
+.facts{display:grid;grid-template-columns:max-content 1fr;gap:10px 24px;margin:0}
+.facts dt{font-weight:700}
+.facts dd{margin:0}
+.price-band{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:20px}
+.price-band div{background:#f2f6f9;border-radius:14px;padding:18px}
+.price-band strong{display:block;font-size:1.7rem;color:var(--navy)}
+.todo{margin:6px 0;padding:10px 14px}
+.todo-list{margin-top:24px}
+@media (max-width:760px){.proposal-toc ol{columns:1}.price-band{grid-template-columns:1fr}.facts{grid-template-columns:1fr}.proposal-section{padding:22px 18px}.price-card{min-width:0}}
+@media print{
+ #header,#footer,.utility,.skip,.buttons,.todo-list,#alerts{display:none!important}
+ body{background:#fff}
+ .hero{background:#fff!important;color:#000!important;padding:0 0 12px!important}
+ .hero h1,.hero p,.hero .eyebrow{color:#000!important}
+ .price-card{box-shadow:none;border:1px solid #999}
+ .proposal{padding:0;gap:12px}
+ .proposal-section{border:0;border-top:1px solid #999;border-radius:0;padding:12px 0;break-inside:avoid-page}
+ .proposal-toc{display:none}
+ a{color:#000;text-decoration:none}
+}
+
+.manifesto{margin:0 0 20px;padding:18px 22px;border-left:4px solid var(--gold);background:#fff8e6;border-radius:0 12px 12px 0;font-size:1.08rem;line-height:1.6}
+.manifesto-line{color:var(--gold);font-weight:600}
+@media print{.manifesto{background:#fff;border-left:3px solid #000}.manifesto-line{color:#000!important}}
+
+.proposal>*{min-width:0}
+.facts dd,.facts dt{min-width:0;overflow-wrap:anywhere}

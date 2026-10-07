@@ -1,0 +1,1324 @@
+[
+  {
+    "id": "district-11-preschool",
+    "name": "District 11 Preschool",
+    "level": "Preschool",
+    "address": "2560 International Circle",
+    "phone": "719-520-2540",
+    "source": "https://preschool.d11.org/",
+    "image": "assets/preschool.jpg",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1762263820/d11org/d11org/d11org/d11org/d11org/d11org/d11org/d11org/d11org/d11org/d11org/d11org/d11org/d11org/d11org/d11org/d11org/d11org/d11org/d11org/d11org/d11org/d11org/d11org/d11org/d11org/d11org/d11org/d11org/d11org/d11org/d11org/okehmyic8cxhldxbcarz/Preschool.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "Early childhood learning and Colorado Universal Preschool opportunities for District 11 families. Contact the program for eligibility and availability.",
+    "introEs": "Aprendizaje infantil y oportunidades de Preescolar Universal de Colorado para las familias del Distrito 11. Consulte los requisitos y la disponibilidad.",
+    "tags": [
+      "Early childhood"
+    ],
+    "tagsEs": [
+      "Educación infantil"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "adams-elementary",
+    "name": "Adams Elementary",
+    "level": "Elementary",
+    "address": "2101 Manitoba Dr",
+    "phone": "719-328-2900",
+    "source": "https://adams.d11.org/",
+    "image": "assets/adams.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697702297/d11org/notbukb5r03rufgxlxj3/adams.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "A neighborhood elementary school with a focus on collaborative learning and community.",
+    "introEs": "Una escuela primaria de vecindario que promueve el aprendizaje colaborativo y la comunidad.",
+    "tags": [
+      "Neighborhood school"
+    ],
+    "tagsEs": [
+      "Escuela de vecindario"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "audubon-elementary",
+    "name": "Audubon Elementary",
+    "level": "Elementary",
+    "address": "2400 E. Van Buren St",
+    "phone": "719-328-2600",
+    "source": "https://audubon.d11.org/",
+    "image": "assets/audubon.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697826872/d11org/u5wv4vsudzey4ovofqyw/Audubon.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "Serving preschool through fifth grade, Audubon brings a long neighborhood tradition to elementary learning.",
+    "introEs": "Audubon atiende desde preescolar hasta quinto grado y aporta una larga tradición de vecindario al aprendizaje.",
+    "tags": [
+      "PreK–5"
+    ],
+    "tagsEs": [
+      "PreK–5"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "bristol-elementary-school",
+    "name": "Bristol Elementary School",
+    "level": "Elementary",
+    "address": "890 North Walnut Street",
+    "phone": "719-328-4000",
+    "source": "https://bristol.d11.org/",
+    "image": "assets/bristol.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697740161/d11org/ageewoklqg4o5ki3skvp/Bristol_cropped.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "An arts-focused elementary school offering Suzuki violin instruction in kindergarten through third grade.",
+    "introEs": "Una escuela primaria enfocada en las artes que ofrece enseñanza de violín Suzuki desde kínder hasta tercer grado.",
+    "tags": [
+      "Arts",
+      "Suzuki violin"
+    ],
+    "tagsEs": [
+      "Artes",
+      "Violín Suzuki"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "buena-vista-elementary-school",
+    "name": "Buena Vista Elementary School",
+    "level": "Elementary",
+    "address": "924 W. Pikes Peak Ave.",
+    "phone": "719-328-4100",
+    "source": "https://buenavista.d11.org/",
+    "image": "assets/buenavista.jpg",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1702066941/d11org/t5bntg52hn66czv4z6sq/BuenaVista.jpg",
+    "identity": "school",
+    "mascot": null,
+    "intro": "Public Montessori education that develops independence through purposeful, hands-on learning.",
+    "introEs": "Educación Montessori pública que desarrolla la independencia mediante actividades prácticas con propósito.",
+    "tags": [
+      "Montessori"
+    ],
+    "tagsEs": [
+      "Montessori"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "carver-elementary-school",
+    "name": "Carver Elementary School",
+    "level": "Elementary",
+    "address": "4740 Artistic Circle",
+    "phone": "719-328-7100",
+    "source": "https://carver.d11.org/",
+    "image": "assets/carver.jpg",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1722347189/d11org/zp1vo9k8bvzgqhjxovgl/carver-logo.jpg",
+    "identity": "school",
+    "mascot": null,
+    "intro": "A neighborhood elementary school that connects families with a supportive learning community.",
+    "introEs": "Una escuela primaria de vecindario que conecta a las familias con una comunidad de apoyo al aprendizaje.",
+    "tags": [
+      "Family partnership"
+    ],
+    "tagsEs": [
+      "Colaboración familiar"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "chipeta-elementary-school",
+    "name": "Chipeta Elementary School",
+    "level": "Elementary",
+    "address": "2340 Ramsgate Terrace",
+    "phone": "719-328-5500",
+    "source": "https://chipeta.d11.org/",
+    "image": "assets/chipeta.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697702303/d11org/wu2mpet2uwakbcf34nnr/chipeta.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "Elementary learning with opportunities for advanced learners and a strong school community.",
+    "introEs": "Aprendizaje de primaria con oportunidades para estudiantes avanzados y una sólida comunidad escolar.",
+    "tags": [
+      "Gifted learning"
+    ],
+    "tagsEs": [
+      "Aprendizaje avanzado"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "columbia-elementary-school",
+    "name": "Columbia Elementary School",
+    "level": "Elementary",
+    "address": "835 E. St. Vrain St.",
+    "phone": "719-328-2700",
+    "source": "https://columbia.d11.org/",
+    "image": "assets/columbia.jpg",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697702303/d11org/hjws4jae7nwqi7nphnvn/columbia.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "Arts integration connects creative expression with everyday elementary learning.",
+    "introEs": "La integración de las artes conecta la expresión creativa con el aprendizaje cotidiano en primaria.",
+    "tags": [
+      "Arts integration"
+    ],
+    "tagsEs": [
+      "Integración de las artes"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "edison-elementary-school",
+    "name": "Edison Elementary School",
+    "level": "Elementary",
+    "address": "3125 N. Hancock Ave",
+    "phone": "719-328-2800",
+    "source": "https://edison.d11.org/",
+    "image": "assets/edison.jpg",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697741546/d11org/z7zpsajv2hwoukpxn17w/Edison.png",
+    "identity": "school",
+    "mascot": "Chargers",
+    "intro": "Students develop collaboration and critical-thinking skills in a community centered on learning.",
+    "introEs": "Los estudiantes desarrollan la colaboración y el pensamiento crítico en una comunidad centrada en el aprendizaje.",
+    "tags": [
+      "Collaborative learning"
+    ],
+    "tagsEs": [
+      "Aprendizaje colaborativo"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "freedom-elementary-school",
+    "name": "Freedom Elementary School",
+    "level": "Elementary",
+    "address": "5280 Butterfield Drive",
+    "phone": "719-228-0800",
+    "source": "https://freedom.d11.org/",
+    "image": "assets/freedom.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1698702282/d11org/pcym2uiwjkffpublyoxu/Freedom.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "Family and community partnerships support students with a variety of learning styles.",
+    "introEs": "La colaboración con las familias y la comunidad apoya a estudiantes con diversas formas de aprender.",
+    "tags": [
+      "Family partnership"
+    ],
+    "tagsEs": [
+      "Colaboración familiar"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "fremont-elementary-school",
+    "name": "Fremont Elementary School",
+    "level": "Elementary",
+    "address": "5110 El Camino Drive",
+    "phone": "719-328-5600",
+    "source": "https://fremont.d11.org/",
+    "image": "assets/fremont.jpg",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1723132633/d11org/q5ebvt30acawdfr0ctey/fremont.jpg",
+    "identity": "school",
+    "mascot": null,
+    "intro": "Student voice and positive relationships support learning through the Capturing Kids’ Hearts approach.",
+    "introEs": "La voz del estudiante y las relaciones positivas apoyan el aprendizaje mediante el enfoque Capturing Kids’ Hearts.",
+    "tags": [
+      "Student voice"
+    ],
+    "tagsEs": [
+      "Voz estudiantil"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "grant-elementary-school",
+    "name": "Grant Elementary School",
+    "level": "Elementary",
+    "address": "3215 Westwood Blvd.",
+    "phone": "719-328-5700",
+    "source": "https://grant.d11.org/",
+    "image": "assets/grant.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697465810/d11org/h91j1zs4j0jlsomfccgi/Grant.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "A neighborhood elementary school serving kindergarten through fifth grade since 1966.",
+    "introEs": "Una escuela primaria de vecindario que atiende desde kínder hasta quinto grado desde 1966.",
+    "tags": [
+      "K–5"
+    ],
+    "tagsEs": [
+      "K–5"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "henry-elementary-school",
+    "name": "Henry Elementary School",
+    "level": "Elementary",
+    "address": "1310 Lehmberg Blvd.",
+    "phone": "719-328-7200",
+    "source": "https://henry.d11.org/",
+    "image": "assets/henry.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697702299/d11org/z9qzzaaibuv9e5s7vvpm/henry.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "Teachers collaborate to strengthen instruction and help every student make progress.",
+    "introEs": "Los docentes colaboran para fortalecer la enseñanza y ayudar a cada estudiante a progresar.",
+    "tags": [
+      "Elementary learning"
+    ],
+    "tagsEs": [
+      "Aprendizaje de primaria"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "howbert-elementary-school",
+    "name": "Howbert Elementary School",
+    "level": "Elementary",
+    "address": "1023 N 31st St.",
+    "phone": "719-328-4200",
+    "source": "https://howbert.d11.org/",
+    "image": "assets/howbert.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697702299/d11org/bf4fyds9xl4mdd4ksvac/howbert.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "Outdoor learning connects classroom ideas with hands-on experiences in the natural world.",
+    "introEs": "El aprendizaje al aire libre conecta las ideas del aula con experiencias prácticas en la naturaleza.",
+    "tags": [
+      "Outdoor learning",
+      "PreK–5"
+    ],
+    "tagsEs": [
+      "Aprendizaje al aire libre",
+      "PreK–5"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "jackson-elementary-school",
+    "name": "Jackson Elementary School",
+    "level": "Elementary",
+    "address": "4340 Edwinstowe Ave",
+    "phone": "719-328-5800",
+    "source": "https://jackson.d11.org/",
+    "image": "assets/jackson.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697702300/d11org/y1sledhbhgylngxw8w4f/jackson-logo.png",
+    "identity": "school",
+    "mascot": "Jaguars",
+    "intro": "An AVID elementary school where writing, inquiry, collaboration, organization, and reading support student success.",
+    "introEs": "Una primaria AVID donde la escritura, la investigación, la colaboración, la organización y la lectura apoyan el éxito estudiantil.",
+    "tags": [
+      "AVID",
+      "PreK–5"
+    ],
+    "tagsEs": [
+      "AVID",
+      "PreK–5"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "keller-elementary-school",
+    "name": "Keller Elementary School",
+    "level": "Elementary",
+    "address": "3730 Montebello Dr",
+    "phone": "719-328-5900",
+    "source": "https://keller.d11.org/",
+    "image": "assets/keller.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697702300/d11org/lklzqwckivulaabkckgk/keller-logo.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "Elementary learning brings together science, technology, engineering, arts, and mathematics.",
+    "introEs": "El aprendizaje de primaria reúne ciencias, tecnología, ingeniería, artes y matemáticas.",
+    "tags": [
+      "STEAM",
+      "PreK–5"
+    ],
+    "tagsEs": [
+      "STEAM",
+      "PreK–5"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "king-elementary-school",
+    "name": "King Elementary School",
+    "level": "Elementary",
+    "address": "6110 Sapporo Dr.",
+    "phone": "719-328-6000",
+    "source": "https://king.d11.org/",
+    "image": "assets/king.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697702299/d11org/e1ylikh3jiv7e4sozjsz/king-logo.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "A neighborhood elementary school with preschool and full-day kindergarten opportunities.",
+    "introEs": "Una escuela primaria de vecindario con opciones de preescolar y kínder de día completo.",
+    "tags": [
+      "Preschool",
+      "Kindergarten"
+    ],
+    "tagsEs": [
+      "Preescolar",
+      "Kínder"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "madison-elementary-school",
+    "name": "Madison Elementary School",
+    "level": "Elementary",
+    "address": "4120 Constitution Ave",
+    "phone": "719-328-7300",
+    "source": "https://madison.d11.org/",
+    "image": "assets/madison.jpg",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1772134293/d11org/jxrnjjvgivxl25fzntge/madison-logo.png",
+    "identity": "school",
+    "mascot": "Mavericks",
+    "intro": "STEM learning and the arts give students opportunities to investigate, create, and perform.",
+    "introEs": "El aprendizaje STEM y las artes ofrecen oportunidades para investigar, crear y actuar.",
+    "tags": [
+      "STEM",
+      "Arts"
+    ],
+    "tagsEs": [
+      "STEM",
+      "Artes"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "martinez-elementary-school",
+    "name": "Martinez Elementary School",
+    "level": "Elementary",
+    "address": "6460 Vickers Dr",
+    "phone": "719-328-6100",
+    "source": "https://martinez.d11.org/",
+    "image": "assets/martinez.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1775496306/d11org/azyfht5as9alfvxyidmg/Martinez.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "Learning encourages creative expression, critical thinking, and problem-solving.",
+    "introEs": "El aprendizaje promueve la expresión creativa, el pensamiento crítico y la resolución de problemas.",
+    "tags": [
+      "Creative learning"
+    ],
+    "tagsEs": [
+      "Aprendizaje creativo"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "mcauliffe-elementary-school",
+    "name": "McAuliffe Elementary School",
+    "level": "Elementary",
+    "address": "830 Hathaway Dr",
+    "phone": "719-228-0900",
+    "source": "https://mcauliffe.d11.org/",
+    "image": "assets/mcauliffe.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697703042/d11org/ouw0gwpk7e6rgvp5tsge/mcauliffe.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "Personalized instruction and technology help students collaborate and connect ideas.",
+    "introEs": "La enseñanza personalizada y la tecnología ayudan a los estudiantes a colaborar y conectar ideas.",
+    "tags": [
+      "STEM"
+    ],
+    "tagsEs": [
+      "STEM"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "midland-elementary-school",
+    "name": "Midland Elementary School",
+    "level": "Elementary",
+    "address": "2110 W. Broadway St",
+    "phone": "719-328-4500",
+    "source": "https://midland.d11.org/",
+    "image": "assets/midland.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_6/v1782249075/d11org/vwb1ryoaipvruzniqeyr/Midland.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "Families and educators work together to support elementary learning and school participation.",
+    "introEs": "Las familias y los docentes colaboran para apoyar el aprendizaje de primaria y la participación escolar.",
+    "tags": [
+      "Family partnership"
+    ],
+    "tagsEs": [
+      "Colaboración familiar"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "monroe-elementary-school",
+    "name": "Monroe Elementary School",
+    "level": "Elementary",
+    "address": "15 S. Chelton Rd",
+    "phone": "719-328-7400",
+    "source": "https://monroe.d11.org/",
+    "image": "assets/monroe.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1777302068/d11org/fnmhyyby26it9lwr3kzm/monroe.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "An elementary school serving District 11 families in Colorado Springs. Contact the school for enrollment and classroom information.",
+    "introEs": "Una escuela primaria al servicio de las familias del Distrito 11 en Colorado Springs. Comuníquese con la escuela para obtener información sobre inscripción y clases.",
+    "tags": [
+      "Elementary learning"
+    ],
+    "tagsEs": [
+      "Aprendizaje de primaria"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "penrose-elementary-school",
+    "name": "Penrose Elementary School",
+    "level": "Elementary",
+    "address": "4285 S. Nonchalant Circle",
+    "phone": "719-328-7500",
+    "source": "https://penrose.d11.org/",
+    "image": "assets/penrose.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697702301/d11org/d132a3ccnprqx02fmjji/penrose.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "A District 11 elementary school in Colorado Springs. The school office can help families with enrollment and daily school questions.",
+    "introEs": "Una escuela primaria del Distrito 11 en Colorado Springs. La oficina puede ayudar con la inscripción y las preguntas sobre la jornada escolar.",
+    "tags": [
+      "Elementary learning"
+    ],
+    "tagsEs": [
+      "Aprendizaje de primaria"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "queen-palmer-elementary-school",
+    "name": "Queen Palmer Elementary School",
+    "level": "Elementary",
+    "address": "1921 E. Yampa",
+    "phone": "719-328-3200",
+    "source": "https://queenpalmer.d11.org/",
+    "image": "assets/queenpalmer.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697702301/d11org/m07yxviv8xuxwhifcwn4/queenpalmer-panda.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "Personalized learning supports curiosity, critical thinking, and connections within the school community.",
+    "introEs": "El aprendizaje personalizado apoya la curiosidad, el pensamiento crítico y los vínculos con la comunidad escolar.",
+    "tags": [
+      "Personalized learning"
+    ],
+    "tagsEs": [
+      "Aprendizaje personalizado"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "rogers-elementary-school",
+    "name": "Rogers Elementary School",
+    "level": "Elementary",
+    "address": "110 S. Circle Drive",
+    "phone": "719-328-3300",
+    "source": "https://rogers.d11.org/",
+    "image": "assets/rogers.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1741381647/d11org/dovt7dej0rxk2mecos5w/RogersWildcat.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "Dual Language Immersion connects academic learning with language development.",
+    "introEs": "La inmersión en dos idiomas conecta el aprendizaje académico con el desarrollo del lenguaje.",
+    "tags": [
+      "Dual language"
+    ],
+    "tagsEs": [
+      "Dos idiomas"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "rudy-elementary-school",
+    "name": "Rudy Elementary School",
+    "level": "Elementary",
+    "address": "5370 Cracker Barrel Cir",
+    "phone": "719-328-7600",
+    "source": "https://rudy.d11.org/",
+    "image": "assets/rudy.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1785518619/d11org/epnxngg03a07ldfkuqnv/RudyLogo.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "Elementary academics are complemented by music, art, physical education, and instrumental music opportunities.",
+    "introEs": "Los estudios de primaria se complementan con música, arte, educación física y oportunidades de música instrumental.",
+    "tags": [
+      "Arts",
+      "Music"
+    ],
+    "tagsEs": [
+      "Artes",
+      "Música"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "scott-elementary-school",
+    "name": "Scott Elementary School",
+    "level": "Elementary",
+    "address": "6175 Whetstone Drive",
+    "phone": "719-328-6200",
+    "source": "https://scott.d11.org/",
+    "image": "assets/scott.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697742577/d11org/fhqc9ouwhal3mhejdsdj/scott.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "The Scott Wolves build community through positivity, achievement, citizenship, and kindheartedness.",
+    "introEs": "Los Wolves de Scott construyen comunidad mediante la positividad, los logros, la ciudadanía y la amabilidad.",
+    "tags": [
+      "Neighborhood school"
+    ],
+    "tagsEs": [
+      "Escuela de vecindario"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "steele-elementary-school",
+    "name": "Steele Elementary School",
+    "level": "Elementary",
+    "address": "1720 N. Weber St",
+    "phone": "719-328-4700",
+    "source": "https://steele.d11.org/",
+    "image": "assets/steele.jpg",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697702302/d11org/utc6zirvjlgzzsw2qlaa/steele.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "A neighborhood school with roots dating to 1901, connecting generations of families through elementary education.",
+    "introEs": "Una escuela de vecindario con raíces en 1901 que conecta a generaciones de familias mediante la educación primaria.",
+    "tags": [
+      "School tradition"
+    ],
+    "tagsEs": [
+      "Tradición escolar"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "stratton-elementary-school",
+    "name": "Stratton Elementary School",
+    "level": "Elementary",
+    "address": "2460 Paseo Rd",
+    "phone": "719-328-3400",
+    "source": "https://stratton.d11.org/",
+    "image": "assets/stratton.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_6/v1697702302/d11org/g7vzgjjuybmkpikvnxl7/stratton.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "An inclusive learning community where authentic experiences and collaboration help students grow.",
+    "introEs": "Una comunidad inclusiva donde las experiencias auténticas y la colaboración ayudan a los estudiantes a crecer.",
+    "tags": [
+      "Inclusive learning"
+    ],
+    "tagsEs": [
+      "Aprendizaje inclusivo"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "taylor-elementary-school",
+    "name": "Taylor Elementary School",
+    "level": "Elementary",
+    "address": "900 E. Buena Ventura St.",
+    "phone": "719-328-3500",
+    "source": "https://taylor.d11.org/",
+    "image": "assets/taylor.jpg",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1698702233/d11org/ldekmed9olfnpjz1d4od/taylor.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "Academic learning and character development support the whole child in a collaborative school community.",
+    "introEs": "El aprendizaje académico y el desarrollo del carácter apoyan al niño en su totalidad en una comunidad colaborativa.",
+    "tags": [
+      "Whole-child learning"
+    ],
+    "tagsEs": [
+      "Aprendizaje integral"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "trailblazer-elementary-school",
+    "name": "Trailblazer Elementary School",
+    "level": "Elementary",
+    "address": "2015 Wickes Road",
+    "phone": "719-328-6300",
+    "source": "https://trailblazer.d11.org/",
+    "image": "assets/trailblazer.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697702302/d11org/crda2xgpjoz781qys55e/trailblazer.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "Place-based learning invites students to solve real-world problems together.",
+    "introEs": "El aprendizaje basado en el entorno invita a los estudiantes a resolver juntos problemas del mundo real.",
+    "tags": [
+      "Place-based learning"
+    ],
+    "tagsEs": [
+      "Aprendizaje basado en el entorno"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "twain-elementary-school",
+    "name": "Twain Elementary School",
+    "level": "Elementary",
+    "address": "3402 East San Miguel St",
+    "phone": "719-328-7700",
+    "source": "https://twain.d11.org/",
+    "image": "assets/twain.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1790686692/d11org/cnsmpfe8cpiarjynes5p/Twain.png",
+    "identity": "school",
+    "mascot": "Tigers",
+    "intro": "Family and community partnerships connect students, educators, and the PTA.",
+    "introEs": "La colaboración familiar y comunitaria conecta a estudiantes, docentes y la asociación de padres y maestros.",
+    "tags": [
+      "Family partnership"
+    ],
+    "tagsEs": [
+      "Colaboración familiar"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "west-campus",
+    "name": "West Campus",
+    "level": "Elementary",
+    "address": "25 N. 20th St. and 1920 W. Pikes Peak Ave",
+    "phone": "719-328-4900",
+    "source": "https://west.d11.org/",
+    "image": "assets/west.jpg",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697702303/d11org/sthivnbxokitggnw6nuj/west.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "West brings elementary and middle school learning together within a shared campus community.",
+    "introEs": "West reúne el aprendizaje de primaria y secundaria en una comunidad de campus compartido.",
+    "tags": [
+      "Campus community"
+    ],
+    "tagsEs": [
+      "Comunidad del campus"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "west-middle-school",
+    "name": "West Middle School",
+    "level": "Middle",
+    "address": "1920 W. Pikes Peak Ave., Colorado Springs, CO 80904",
+    "phone": "719-328-3910",
+    "source": "https://west.d11.org/",
+    "image": "assets/west.jpg",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697702303/d11org/sthivnbxokitggnw6nuj/west.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "Middle school learning within the West campus community on Colorado Springs’ west side.",
+    "introEs": "Aprendizaje de secundaria en la comunidad del campus West, en el oeste de Colorado Springs.",
+    "tags": [
+      "Middle school"
+    ],
+    "tagsEs": [
+      "Secundaria"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "wilson-elementary-school",
+    "name": "Wilson Elementary School",
+    "level": "Elementary",
+    "address": "1409 De Reamer Circle",
+    "phone": "719-328-7800",
+    "source": "https://wilson.d11.org/",
+    "image": "assets/wilson.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697702303/d11org/c1m3pc3ilfpmiw9xhaja/wilson.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "A neighborhood elementary school serving families on the east side of District 11.",
+    "introEs": "Una escuela primaria de vecindario al servicio de familias en el este del Distrito 11.",
+    "tags": [
+      "Neighborhood school"
+    ],
+    "tagsEs": [
+      "Escuela de vecindario"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "catalyst-program",
+    "name": "Catalyst Program",
+    "level": "Program",
+    "address": "North and Russell Middle School",
+    "phone": "719-328-5043",
+    "source": "https://www.d11.org/select-a-school",
+    "image": "assets/d11.png",
+    "imageSource": null,
+    "identity": "district",
+    "mascot": null,
+    "intro": "A District 11 program listed at North and Russell middle schools. Contact the program for placement and participation information.",
+    "introEs": "Un programa del Distrito 11 ubicado en las secundarias North y Russell. Comuníquese con el programa para obtener información de participación.",
+    "tags": [
+      "Middle-level program"
+    ],
+    "tagsEs": [
+      "Programa de nivel secundario"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": false
+  },
+  {
+    "id": "galileo-middle-school",
+    "name": "Galileo Middle School",
+    "level": "Middle",
+    "address": "1600 N. Union Blvd",
+    "phone": "719-328-2200",
+    "source": "https://galileo.d11.org/",
+    "image": "assets/galileo.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697702299/d11org/vhbtfthukiyjsmosqyyr/galileo.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "Core academics meet technology, the arts, and hands-on engineering through Project Lead the Way.",
+    "introEs": "Las materias básicas se unen a la tecnología, las artes y la ingeniería práctica mediante Project Lead the Way.",
+    "tags": [
+      "AVID",
+      "Engineering",
+      "Arts"
+    ],
+    "tagsEs": [
+      "AVID",
+      "Ingeniería",
+      "Artes"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "holmes-middle-school",
+    "name": "Holmes Middle School",
+    "level": "Middle",
+    "address": "2455 Mesa Road",
+    "phone": "719-328-3800",
+    "source": "https://holmes.d11.org/",
+    "image": "assets/holmes.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697467399/d11org/t122nyx4lqkmnozzdwcj/Holmes.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "Students build skills through personalized goals, practice, and demonstrations of learning.",
+    "introEs": "Los estudiantes desarrollan habilidades mediante metas personales, práctica y demostraciones de aprendizaje.",
+    "tags": [
+      "Personalized learning"
+    ],
+    "tagsEs": [
+      "Aprendizaje personalizado"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "jack-swigert-middle-school",
+    "name": "Jack Swigert Middle School",
+    "level": "Middle",
+    "address": "4220 E. Pikes Peak Ave",
+    "phone": "719-328-6900",
+    "source": "https://swigert.d11.org/",
+    "image": "assets/swigert.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1782150020/d11org/az4nmofwvwpemdzjdghh/Swigert.png",
+    "identity": "school",
+    "mascot": "Titans",
+    "intro": "The Swigert Titans connect middle school learning with an aerospace academy identity.",
+    "introEs": "Los Titans de Swigert conectan el aprendizaje de secundaria con la identidad de una academia aeroespacial.",
+    "tags": [
+      "Aerospace academy"
+    ],
+    "tagsEs": [
+      "Academia aeroespacial"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "jenkins-middle-school",
+    "name": "Jenkins Middle School",
+    "level": "Middle",
+    "address": "6410 Austin Bluffs Parkway",
+    "phone": "719-328-5300",
+    "source": "https://jenkins.d11.org/",
+    "image": "assets/jenkins.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_6/v1780320917/d11org/llgg1st8nspbhpbzztvn/jenkins-logo.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "A District 11 middle school in northeast Colorado Springs. Families can contact the school for schedules, enrollment, and student support.",
+    "introEs": "Una secundaria del Distrito 11 en el noreste de Colorado Springs. Las familias pueden consultar sobre horarios, inscripción y apoyo estudiantil.",
+    "tags": [
+      "Middle school"
+    ],
+    "tagsEs": [
+      "Secundaria"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "mann-middle-school",
+    "name": "Mann Middle School",
+    "level": "Middle",
+    "address": "1001 E. Van Buren St.",
+    "phone": "719-328-2300",
+    "source": "https://mann.d11.org/",
+    "image": "assets/mann.jpg",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1785179436/d11org/lcukfyex31e6kyguzsco/mann-logo.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "Core academics are complemented by visual and performing arts, practical electives, and learning supports.",
+    "introEs": "Las materias básicas se complementan con artes visuales y escénicas, optativas prácticas y apoyo al aprendizaje.",
+    "tags": [
+      "Performing arts",
+      "Electives"
+    ],
+    "tagsEs": [
+      "Artes escénicas",
+      "Optativas"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "north-middle-school",
+    "name": "North Middle School",
+    "level": "Middle",
+    "address": "612 E. Yampa St.",
+    "phone": "719-328-2400",
+    "source": "https://north.d11.org/",
+    "image": "assets/north.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_6/v1726171980/d11org/wk9wwikcdoh37jcpdgew/north-logo.png",
+    "identity": "school",
+    "mascot": "Vikings",
+    "intro": "The International Baccalaureate Middle Years Programme connects subjects, service, and a global perspective.",
+    "introEs": "El Programa de los Años Intermedios del Bachillerato Internacional conecta las materias, el servicio y una perspectiva global.",
+    "tags": [
+      "IB Middle Years"
+    ],
+    "tagsEs": [
+      "PAI del IB"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "russell-middle-school",
+    "name": "Russell Middle School",
+    "level": "Middle",
+    "address": "3825 Montebello Dr W.",
+    "phone": "719-328-5200",
+    "source": "https://russell.d11.org/",
+    "image": "assets/russell.jpg",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1748031828/d11org/kuep4n9aihtrg7ndi6mx/russell.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "A middle school community with a visual and performing arts identity.",
+    "introEs": "Una comunidad de secundaria con una identidad de artes visuales y escénicas.",
+    "tags": [
+      "Visual & performing arts"
+    ],
+    "tagsEs": [
+      "Artes visuales y escénicas"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "sabin-middle-school",
+    "name": "Sabin Middle School",
+    "level": "Middle",
+    "address": "3605 N. Carefree Circle",
+    "phone": "719-328-7000",
+    "source": "https://sabin.d11.org/",
+    "image": "assets/sabin.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697702301/d11org/k0iqjgbjtrn3kgyzpgjt/sabin.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "STEAM learning brings together engineering, creative arts, music, dance, and drama.",
+    "introEs": "El aprendizaje STEAM reúne ingeniería, artes creativas, música, danza y teatro.",
+    "tags": [
+      "STEAM",
+      "Performing arts"
+    ],
+    "tagsEs": [
+      "STEAM",
+      "Artes escénicas"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "coronado-high-school",
+    "name": "Coronado High School",
+    "level": "High",
+    "address": "1590 W. Fillmore St",
+    "phone": "719-328-3600",
+    "source": "https://coronado.d11.org/",
+    "image": "assets/coronado.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697702303/d11org/mjwogoqxceimti1ilg2e/coronado.png",
+    "identity": "school",
+    "mascot": "Cougars",
+    "intro": "The Coronado Cougars offer high school academics alongside robotics, music, and college-credit opportunities.",
+    "introEs": "Los Cougars de Coronado ofrecen estudios de preparatoria junto con robótica, música y oportunidades de créditos universitarios.",
+    "tags": [
+      "College credit",
+      "Robotics",
+      "Music"
+    ],
+    "tagsEs": [
+      "Créditos universitarios",
+      "Robótica",
+      "Música"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "doherty-high-school",
+    "name": "Doherty High School",
+    "level": "High",
+    "address": "4515 Barnes Rd",
+    "phone": "719-328-6400",
+    "source": "https://doherty.d11.org/",
+    "image": "assets/doherty.jpg",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697739786/d11org/dlpptuq6s6qjxttyhzkc/Doherty_Spartan.jpg",
+    "identity": "school",
+    "mascot": "Spartans",
+    "intro": "The Doherty Spartans connect advanced academics and career education with arts and athletics.",
+    "introEs": "Los Spartans de Doherty conectan los estudios avanzados y la educación profesional con las artes y los deportes.",
+    "tags": [
+      "AP",
+      "Career education",
+      "Athletics"
+    ],
+    "tagsEs": [
+      "AP",
+      "Educación profesional",
+      "Deportes"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "mitchell-high-school",
+    "name": "Mitchell High School",
+    "level": "High",
+    "address": "1205 Potter Dr.",
+    "phone": "719-328-6600",
+    "source": "https://mitchell.d11.org/",
+    "image": "assets/mitchell.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697702300/d11org/ujxd0mt5jiruzkhrafpb/mitchell-logo.png",
+    "identity": "school",
+    "mascot": "Marauders",
+    "intro": "The Mitchell Marauders offer college and career pathways, including biomedicine, advanced academics, AFJROTC, and the arts.",
+    "introEs": "Los Marauders de Mitchell ofrecen trayectorias universitarias y profesionales, incluidas biomedicina, estudios avanzados, AFJROTC y artes.",
+    "tags": [
+      "Biomedicine",
+      "AFJROTC",
+      "Arts"
+    ],
+    "tagsEs": [
+      "Biomedicina",
+      "AFJROTC",
+      "Artes"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "palmer-high-school",
+    "name": "Palmer High School",
+    "level": "High",
+    "address": "301 N. Nevada Ave.",
+    "phone": "719-328-5000",
+    "source": "https://palmer.d11.org/",
+    "image": "assets/palmer.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697702300/d11org/wfx9fhxe6nioapbf5xqw/palmer-logo.png",
+    "identity": "school",
+    "mascot": "Terrors",
+    "intro": "The Palmer Terrors offer International Baccalaureate pathways through the Middle Years, Career-related, and Diploma programmes.",
+    "introEs": "Los Terrors de Palmer ofrecen trayectorias del Bachillerato Internacional mediante los programas de Años Intermedios, Orientación Profesional y Diploma.",
+    "tags": [
+      "International Baccalaureate"
+    ],
+    "tagsEs": [
+      "Bachillerato Internacional"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "achieve-online",
+    "name": "Achieve Online",
+    "level": "Program",
+    "address": "2115 Afton Way",
+    "phone": "719-328-3012",
+    "source": "https://achieve.d11.org/",
+    "image": "assets/achieve.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697702297/d11org/iwnkalbnce0plvmnfhm2/achieve.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "An online learning program within District 11. Contact Achieve for current enrollment options and student support.",
+    "introEs": "Un programa de aprendizaje en línea del Distrito 11. Comuníquese con Achieve sobre las opciones actuales de inscripción y apoyo estudiantil.",
+    "tags": [
+      "Online learning"
+    ],
+    "tagsEs": [
+      "Aprendizaje en línea"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "adult-and-family-education",
+    "name": "Adult and Family Education",
+    "level": "Program",
+    "address": "2115 Afton Way",
+    "phone": "719-328-3001",
+    "source": "https://adulted.d11.org/",
+    "image": "assets/adulted.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697742849/d11org/c4wkmxfxeo3rdt4ebioh/AdultEd.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "Free GED preparation, English classes, and career training support adult learners through online and in-person options.",
+    "introEs": "Preparación gratuita para el GED, clases de inglés y capacitación profesional apoyan a adultos mediante opciones en línea y presenciales.",
+    "tags": [
+      "Adult education",
+      "English",
+      "GED"
+    ],
+    "tagsEs": [
+      "Educación de adultos",
+      "Inglés",
+      "GED"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "base-camp",
+    "name": "Base Camp",
+    "level": "Program",
+    "address": "2560 International Circle",
+    "phone": "719-328-4318",
+    "source": "https://basecamp.d11.org/",
+    "image": "assets/basecamp.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_6/v1712597247/d11org/hktluxzygl5ueke4pwst/BaseCampLogo.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "Homeschool enrichment helps families connect with additional learning experiences.",
+    "introEs": "El enriquecimiento para la educación en casa conecta a las familias con experiencias adicionales de aprendizaje.",
+    "tags": [
+      "Homeschool enrichment"
+    ],
+    "tagsEs": [
+      "Enriquecimiento en casa"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "odyssey-early-college-and-career-options",
+    "name": "Odyssey Early College and Career Options",
+    "level": "Program",
+    "address": "2115 Afton Way",
+    "phone": "719-328-2020",
+    "source": "https://odyssey.d11.org/",
+    "image": "assets/odyssey.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697741708/d11org/eapgr0qfo2ivji3wh6ay/Odyssey.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "Early college, dual enrollment, and career pathways help students connect high school with their next steps.",
+    "introEs": "Las opciones de universidad temprana, inscripción simultánea y trayectorias profesionales conectan la preparatoria con los próximos pasos.",
+    "tags": [
+      "Early college",
+      "Career pathways"
+    ],
+    "tagsEs": [
+      "Universidad temprana",
+      "Trayectorias profesionales"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "roy-j-wasson-academic-campus",
+    "name": "Roy J. Wasson Academic Campus",
+    "level": "Program",
+    "address": "2115 Afton Way",
+    "phone": "719-328-2000",
+    "source": "https://rjwac.d11.org/",
+    "image": "assets/rjwac.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697702301/d11org/q17nj64z9mykn2gw2n0a/RJWAC1.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "A shared academic campus bringing together alternative, online, early college, career, and adult learning options.",
+    "introEs": "Un campus compartido que reúne opciones de educación alternativa, en línea, universidad temprana, formación profesional y educación de adultos.",
+    "tags": [
+      "Academic pathways"
+    ],
+    "tagsEs": [
+      "Trayectorias académicas"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "spark-online-academy",
+    "name": "SPARK Online Academy",
+    "level": "Program",
+    "address": "2560 International Cir",
+    "phone": "719-328-4300",
+    "source": "https://spark.d11.org/",
+    "image": "assets/spark.svg",
+    "imageSource": "https://resources.finalsite.net/images/v1725999703/d11org/lbu0kygf1pn42kbzobq7/spark.svg",
+    "identity": "school",
+    "mascot": null,
+    "intro": "Online and blended learning offers a personalized K–8 pathway for District 11 families.",
+    "introEs": "El aprendizaje en línea y combinado ofrece una trayectoria personalizada de kínder a octavo grado para familias del Distrito 11.",
+    "tags": [
+      "K–8",
+      "Online & blended"
+    ],
+    "tagsEs": [
+      "K–8",
+      "En línea y combinado"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "tesla-educational-opportunity-school",
+    "name": "Tesla Educational Opportunity School",
+    "level": "Program",
+    "address": "3302 Alpine Place",
+    "phone": "719-328-3100",
+    "source": "https://tesla.d11.org/",
+    "image": "assets/tesla.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697702302/d11org/fq5petzdff98dpe3edvh/tesla.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "An educational opportunity school within District 11. Contact the school for current program and enrollment information.",
+    "introEs": "Una escuela de oportunidades educativas del Distrito 11. Comuníquese con la escuela para conocer los programas y la inscripción actuales.",
+    "tags": [
+      "Alternative pathway"
+    ],
+    "tagsEs": [
+      "Trayectoria alternativa"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "colorado-springs-school-of-technology",
+    "name": "Colorado Springs School of Technology",
+    "level": "Program",
+    "address": "3650 North Nevada Ave.",
+    "phone": "See official site",
+    "source": "https://www.csrockets.org/",
+    "image": "assets/csrockets.webp",
+    "imageSource": "https://www.csrockets.org/_next/image?url=%2Fcsst-logo.png&w=640&q=75",
+    "identity": "school",
+    "mascot": null,
+    "intro": "A public high school connecting grades 9–12 with cybersecurity, artificial intelligence, aerospace, and entrepreneurship.",
+    "introEs": "Una preparatoria pública que conecta los grados 9–12 con ciberseguridad, inteligencia artificial, industria aeroespacial y emprendimiento.",
+    "tags": [
+      "Technology",
+      "Aerospace",
+      "Entrepreneurship"
+    ],
+    "tagsEs": [
+      "Tecnología",
+      "Industria aeroespacial",
+      "Emprendimiento"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": true
+  },
+  {
+    "id": "tesla-middle-school",
+    "name": "Tesla Middle School",
+    "level": "Middle",
+    "address": "Address to confirm with D11",
+    "phone": "719-328-3112",
+    "source": "https://tesla.d11.org/",
+    "image": "assets/tesla.png",
+    "imageSource": "https://resources.finalsite.net/images/f_auto,q_auto/v1697702302/d11org/fq5petzdff98dpe3edvh/tesla.png",
+    "identity": "school",
+    "mascot": null,
+    "intro": "A middle school listed in District 11’s Title I school information. Call to confirm the current campus and enrollment arrangements.",
+    "introEs": "Una secundaria incluida en la información de escuelas de Título I del Distrito 11. Llame para confirmar el campus y la inscripción actuales.",
+    "tags": [
+      "Middle school"
+    ],
+    "tagsEs": [
+      "Secundaria"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": false
+  },
+  {
+    "id": "bijou-high-school",
+    "name": "Bijou High School",
+    "level": "High",
+    "address": "Address to confirm with D11",
+    "phone": "719-328-2064",
+    "source": "https://www.d11.org/aboutd11/operations/titlei/title-i-schools-2024-2025",
+    "image": "assets/d11.png",
+    "imageSource": null,
+    "identity": "district",
+    "mascot": null,
+    "intro": "A high school listed in District 11’s Title I school information. Call to confirm the current campus and enrollment arrangements.",
+    "introEs": "Una preparatoria incluida en la información de escuelas de Título I del Distrito 11. Llame para confirmar el campus y la inscripción actuales.",
+    "tags": [
+      "High school"
+    ],
+    "tagsEs": [
+      "Preparatoria"
+    ],
+    "checkedAt": "2026-10-07",
+    "addressVerified": false
+  }
+]
