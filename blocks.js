@@ -10,6 +10,11 @@ function db() {
 async function tx(mode, fn) { const d = await db(); return new Promise((ok, bad) => { const t = d.transaction(STORE, mode), s = t.objectStore(STORE), r = fn(s); t.oncomplete = () => ok(r && 'result' in r ? r.result : undefined); t.onerror = () => bad(t.error); }); }
 export async function putMedia(blob, name = '') { const id = 'm' + Date.now().toString(36) + Math.random().toString(36).slice(2, 7); await tx('readwrite', s => s.put({ blob, name, type: blob.type, size: blob.size }, id)); return id; }
 export async function getMedia(id) { try { return await tx('readonly', s => s.get(id)); } catch { return null; } }
+export async function putMediaAt(id, rec) { await tx('readwrite', s => s.put(rec, id)); urlCache.delete(id); }
+export async function deleteMedia(id) { try { await tx('readwrite', s => s.delete(id)); urlCache.delete(id); } catch {} }
+export async function listMedia() {
+  try { const keys = await tx('readonly', s => s.getAllKeys()), vals = await tx('readonly', s => s.getAll()); return keys.map((id, i) => ({ id, ...vals[i] })); } catch { return []; }
+}
 export async function clearMedia() { try { await tx('readwrite', s => s.clear()); } catch {} }
 const urlCache = new Map();
 export async function mediaURL(id) { if (urlCache.has(id)) return urlCache.get(id); const m = await getMedia(id); if (!m) return ''; const u = URL.createObjectURL(m.blob); urlCache.set(id, u); return u; }
