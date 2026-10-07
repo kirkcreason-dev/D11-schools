@@ -10,6 +10,9 @@ export const bid = {
   contactTitle: 'Owner',               // e.g. Founder / CEO
   contactPhone: '816-971-4160',
   contactEmail: 'kirkcreason@creaso-norsetech.com',
+  districtRate: 2000,              // per year, district site
+  schoolRate: 1000,                // per year, each school or program site
+  schoolCount: 58,
   annualPrice: 60000,               // flat rate per year, all-inclusive
   implementationFee: 0,             // included in the flat rate
   familyMessagesAddOn: 'Included in the flat rate',        // optional add-on price per year, or 'Included'
@@ -22,5 +25,13 @@ export const bid = {
   references: [{organization: 'Psychopathic Records', role: 'Client: websites and mobile apps', contactOnRequest: true}],                 // array of {name, organization, role, phone, email, sites}
   ownershipAtEnd: 'At the end of the contract, the District owns the website.',
   selfManage: 'Whenever the District is ready, Creaso-Norse Technologies will transition it to manage its own site, free of charge: the complete site, all content, documentation and hands-on training. No more relying on outside vendors.',
+  demoUrl: 'https://kirkcreason-dev.github.io/D11-schools/',
+  founderNote: 'Owner Kirk Creason has been building websites and software since 1999, and the company runs websites with over 20,000 pages.',
+  ownerPromise: 'No corporate layers: the District works directly with the owner, and customization requests are handled the same day.',
+  appPrice: 40000,                 // optional District 11 mobile app (iOS + Android)
+  appPeriod: 'one-time build',
+  appMaintenance: 12000,           // per year after launch
+  familyNote: 'Creaso-Norse Technologies is part of the Creaso family of organizations, alongside Creaso Camps LLC, which manages campgrounds for Denver Water at multiple reservoirs and holds right-of-way cleaning contracts with the City of Lakewood, Colorado, and the Creaso Cares Foundation, a nonprofit that helps people experiencing homelessness and veterans.',
+  publicSector: 'Public-sector contracting: through its sister company Creaso Camps LLC, the Creaso family already delivers ongoing contracts for Denver Water and the City of Lakewood, Colorado.',
   teamNote: 'Support & Operations is led by Andy Montgomery.'
 };

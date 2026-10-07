@@ -37,3 +37,9 @@
 
 .proposal>*{min-width:0}
 .facts dd,.facts dt{min-width:0;overflow-wrap:anywhere}
+
+.demo-link{margin-top:10px}.demo-link a{color:#fff;text-decoration:underline}
+@media print{.demo-link a{color:#000!important;text-decoration:underline}}
+
+.proposal,.proposal-hero{font-feature-settings:"calt" 0}
+@media print{body{font-feature-settings:"calt" 0}}
